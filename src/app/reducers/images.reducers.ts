@@ -131,8 +131,8 @@ export function reducer(state: AppState = initialState, action: ImagesActions.Ac
                 let j: number,temp;
                 for (let i = state.imgData.length - 1; i > 0; i-- ) {
                     j = Math.floor(Math.random() * (i + 1));
-                    temp = state.imgData[i];
-                    state.imgData[i] = state.imgData[j];
+                    temp = image;
+                    image= state.imgData[j];
                     state.imgData[j] = temp
                 }
                 return  image;
