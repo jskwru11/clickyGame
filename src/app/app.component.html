@@ -1,0 +1,36 @@
+<mat-toolbar color="primary">  
+  <mat-toolbar-row>
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item><mat-icon>home</mat-icon>Home</button>
+        <button mat-menu-item><mat-icon>settings</mat-icon>Settings</button>
+      </mat-menu>
+
+
+  </mat-toolbar-row>
+
+  <mat-toolbar-row>
+      <div>Clicky Game</div>
+      <div>Click an image to begin!</div>
+      <div>Score: {{ score }} | Top Score: {{ topScore }}</div>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<section 
+class="middle"
+fxLayout="row wrap"
+>
+  <app-imgcard *ngFor="let image of images; let i = index;"
+  [imgPath]=image.imgPath
+  (click)="onClick(i)"></app-imgcard>
+</section>
+
+
+
+
+
+
+
+
+
+<router-outlet></router-outlet>
