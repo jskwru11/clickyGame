@@ -128,14 +128,14 @@ export function reducer(state: AppState = initialState, action: ImagesActions.Ac
             return {...state};
         case ImagesActions.SHUFFLE_IMAGES:
             return {...state, imgData: state.imgData.map((image) => {
-                let j,temp;
+                let j: number,temp;
                 for (let i = state.imgData.length - 1; i > 0; i-- ) {
                     j = Math.floor(Math.random() * (i + 1));
                     temp = state.imgData[i];
                     state.imgData[i] = state.imgData[j];
                     state.imgData[j] = temp
                 }
-                return  state.imgData;
+                return  image;
         
             })}
         case ImagesActions.GET_SCORE:
