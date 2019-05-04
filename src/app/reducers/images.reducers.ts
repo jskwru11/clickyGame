@@ -3,7 +3,6 @@ import * as ImagesActions from '../actions/images.actions';
 import { Action } from '@ngrx/store';
 import { Images } from '../models/images.model';
 import { AppState } from '../store/app.state';
-import { stat } from 'fs';
 
 
 const initialState: AppState = {
